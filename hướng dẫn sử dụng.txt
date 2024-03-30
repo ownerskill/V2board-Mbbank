@@ -1,0 +1,20 @@
+B1 : Vào apptore => Installed => Php-7.4 (8.2) tùy phiên bản của code bạn => Install Extension => ionCube => install
+B2 : Vào thư mục Payments => Copy 2 file .php đem vào www/wwwroot/tênweb/app/payments => dán vào
+B3 : Ở file này bạn tìm file config.php => edit => Tên web và database của bạn để get dữ liệu 
+        'DBNAME' => "xxxx", // *DB_DATABASE trong file.env
+        'USERNAME' => "xxxx", // *DB_USERNAME trong file .env
+        'PASSWORD' => "xxxx", //*DB_PASSWORD trong file .env
+        
+B4 : Vào trang admin của web bạn => Cấu hình thanh toán => Thêm phương thức thanh toán => Chọn giao diện AutoMbbank
+B5 : Vào trang https://api.vpnfast.vn để thuê api và lấy token 
+B6 : Quay lại trang cấu hình thanh toán của bạn dán token vào và settings các thứ cần thiết có hướng dẫn ở cấu hình thanh toán 
+B7 : Chạy Cron 
+
+sleep 30;php /www/wwwroot/tên web/public/tên file thanh toán của bạn/Cron/DVS_AutoMBBank.php
+
+Ví dụ bạn đặt nó ở public/thanhtoan thì chạy như sau 
+
+sleep 30;php /www/wwwroot/tên web/public/thanhtoan/Cron/DVS_AutoMBBank.php
+
+
+API.VPNFAST.VN Cảm ơn bạn đã sử dụng API 
